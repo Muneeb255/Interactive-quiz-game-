@@ -115,7 +115,7 @@ function restartQuiz() {
     scoreEl.textContent = score;
     endScreen.style.display = 'none'; // Hide the end screen
     document.getElementById('question-area').style.display = 'block'; // Show questions
-    showQuestion(); // Show the first question
+    showQuestion(); // Show the first questi
 }
 
 optionButtons.forEach(btn => {
