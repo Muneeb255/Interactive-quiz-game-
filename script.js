@@ -3,8 +3,8 @@ const questions = [
     {
         question: "What is the capital of France?",
         choices: ["Berlin", "Madrid", "Paris", "Lisbon"],
-        answer: 2 // Index of the correct answer
-    },
+        answer: 2 
+        },
     {
         question: "Which planet is known as the Red Planet?",
         choices: ["Earth", "Mars", "Jupiter", "Venus"],
@@ -93,8 +93,6 @@ function checkAnswer(event) {
     // Update the score on the page
     scoreEl.textContent = score;
 }
-
-// Move to the next question or end the quiz if finished
 function nextQuestion() {
     currentQuestion++; // Go to the next question
 
@@ -105,14 +103,12 @@ function nextQuestion() {
     }
 }
 
-// End the quiz and show the final score
 function endQuiz() {
     document.getElementById('question-area').style.display = 'none'; // Hide questions
     endScreen.style.display = 'block'; // Show end screen
     finalScoreEl.textContent = score; // Display final score
 }
 
-// Restart the quiz
 function restartQuiz() {
     currentQuestion = 0;
     score = 0;
@@ -122,16 +118,12 @@ function restartQuiz() {
     showQuestion(); // Show the first question
 }
 
-// Add event listeners for clicking on answer buttons
 optionButtons.forEach(btn => {
     btn.addEventListener('click', checkAnswer);
 });
 
-// Add event listener for the "Next Question" button
 nextButton.addEventListener('click', nextQuestion);
 
-// Add event listener for the "Play Again" button
 playAgainButton.addEventListener('click', restartQuiz);
 
-// Start the quiz by showing the first question
 showQuestion();
