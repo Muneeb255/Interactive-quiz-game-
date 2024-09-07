@@ -106,7 +106,7 @@ function nextQuestion() {
 function endQuiz() {
     document.getElementById('question-area').style.display = 'none'; // Hide questions
     endScreen.style.display = 'block'; // Show end screen
-    finalScoreEl.textContent = score; // Display final score
+    finalScoreEl.textContent = score; // Display final scor
 }
 
 function restartQuiz() {
